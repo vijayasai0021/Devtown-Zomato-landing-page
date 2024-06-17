@@ -1,0 +1,609 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.hero_section{
+    background: url(./images/heroSectionBackground.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 60vh;
+    color: white;
+
+}
+.hero_section a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding: 16px 48px;
+
+}
+
+.navbar_menu_rightmost{
+    display: flex;
+    gap: 10px;
+}
+
+/* you have to use the dot infront pf second class for class in class */
+.navbar_menu_rightmost .user_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: 1px solid white;
+    display: none;
+}
+
+
+
+.hero_section_middlepart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* height: calc(60vh-65px);  */
+    height: 270px;
+    
+}
+.hero_section_logo{
+    width: 300px;
+    height: 60px;
+    font-weight: 300;
+}
+
+.hero_section_middletitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.hero_section_input_tags{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    width: 50%;
+    
+}
+
+.hero_section_location, .hero_section_search{
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.hero_section_location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+.hero_section_search{
+    width: 65%;
+    
+    padding-left: 30px;
+}
+
+
+/* cards in zomato */
+
+.cards_container{
+    margin: 3rem auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.cards_weoffer{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all 0.5s ease;
+    margin-right: 12px;
+}
+
+.cards_weoffer:hover{
+    transform: scale(1.1);
+}
+
+.cards_weoffer img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+.cards_content{
+    padding: 10px;
+}
+.cards_weoffer h2{
+    color: #363636;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+
+.cards_weoffer p{
+    color: #4f4f4f;
+    font-size: 12.5px;
+    
+}
+
+
+/* collections in zomato */
+.collections h1{
+    font-weight: 600;
+    font-family:'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.container_collections_heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:270px;
+    margin-right: 270px;
+    
+}
+.collections .sub__heading_container{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+   
+}
+
+.sub__heading_container span:nth-child(2){
+    color: #ff7e8b;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.collections_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.collections_card_container .card{
+    height: 300px;
+    min-width: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card1{
+    background-image: url('https://b.zmtcdn.com/data/collections/1a6f508d48e7bd6a88bdaacf5e3e75ab_1718195675.png?fit=around|562.5:360&crop=562.5:360;*,*');
+}
+
+.card2{
+    background-image: url('https://b.zmtcdn.com/data/collections/5392893ea0c6a82df4fc31890e27ef94_1718220632.png?fit=around|562.5:360&crop=562.5:360;*,*');
+}
+
+.card3{
+    background-image: url('https://b.zmtcdn.com/data/collections/518f4bff7d512bf53ea5164e365535ed_1718188289.png?fit=around|562.5:360&crop=562.5:360;*,*');
+}
+
+.card4{
+    background-image: url('https://b.zmtcdn.com/data/collections/7771cf3a18e1da2916794d3998260c69_1709812319.png');
+}
+
+/* rgba => Red, Green, Blue, Opacity */
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+      
+        rgba(225, 0, 0, 1) 0%,
+        rgba(225, 0, 2, 1) 50%,
+        rgba(225, 0, 0, 1) 85%,
+    );
+    z-index: 5;
+}
+
+.collections_card_container .card .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    z-index: 6;
+}
+
+
+.card:hover{
+    cursor: pointer;
+}
+.content h4{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+/* this is for get the app section */
+.container__get_the_app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffbf7;
+    width: 100%;
+    padding: 3rem 6rem;
+    
+}
+
+.container__get_the_app .semi_container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container__get_the_app .semi_container .get_the_app_left{
+    flex: 2;
+}
+
+.container__get_the_app .semi_container .get_the_app_left img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container__get_the_app .semi_container .get_the_app_right{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.get_the_app_right h2{
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 400; 
+    color: rgb(28, 28, 28);
+    font-size: 2rem;
+}
+.get_the_app_right p {
+    font-size: 0.8rem;
+}
+
+.get_the_app_right .radio_button_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.get_the_app_right .radio_button_container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.get_the_app_right .radio_button_container div input{
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239,79,95);
+}
+
+.get_the_app_right .input_container{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input_container{
+    flex-wrap: wrap;
+}
+
+.input_container button,
+.input_container input {
+    padding: 10px 12px;
+}
+
+.input_container input{
+    flex: auto;
+    border: 1.5px solid gray;
+    outline: none;
+    border-radius: 5px;
+
+
+}
+
+.input_container button{
+    border: none;
+    background-color: rgb(239, 79, 95);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.get_the_app_right .download_app_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+}
+
+.get_the_app_right .download_app_container h6{
+    font-weight: 400;
+    color: grey;
+    
+}
+
+.get_the_app_right .download_app_container div{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.get_the_app_right .download_app_container div img{
+    width: 35%;
+    
+}
+
+.get_the_app_right .download_app_container  img:hover{
+    cursor: pointer;
+}
+
+
+
+/* this is for explore the items section */
+.explore_options_container{
+    
+    width: 100%;
+    max-height: initial;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 200px;
+    gap: 0.5px;
+    
+}
+.explore_options_container div{
+    font-size: 1.6rem;
+}
+
+.explore_options_container h1{
+    margin: 0px 0px 2rem 20px;
+    color: rgb(54,54,54);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.explore_options_container .explore_input_container{
+    margin-top: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* this is for footer section */
+.footer{
+    width: 100%;
+}
+
+.footer_section1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px ;
+}
+
+.section1_button_container button{
+    padding: 5px;
+    width: 100px;       
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+.footer_navigation{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+    padding: 3rem 0;
+    
+}
+
+.link_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;    
+
+}
+
+.link_container h5{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 400;
+}
+
+.footer_link:hover{
+    color: black;
+}
+
+
+.socialmedia_links_container button{
+    background-color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.socialmedia_links_container button i{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer__section_logos{
+    width: 80%;
+}
+
+.disclaimer{
+    width: 80%;
+    margin: auto;
+    font-family:'Poppins', sans-serif ;
+    color: gray;
+    border-top: 1px solid gray;
+    padding-top: 1.5rem;
+    font-size: 12.5px;
+}
+
+
+
+/* for responsive we use media queires */
+/* for smaller screen size (mobiles and tablets) */
+@media only screen and  (max-width:600px){
+    /* below two sections is to appear just user icon and hide all other options */
+    .navbar_menu_rightmost .user_icon{
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
+    /* this to increase the hero picture when in small screen */
+    .hero_section{
+        height: 80vh;
+    }
+    .hero__section_middlepart{
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    }
+    .hero_section_location,
+    .hero_section_search{
+    padding: 18px;
+    border-radius: 10px;
+    width: 98%;
+    }
+    .hero__section_middlepart{
+    height: calc(80vh - 40px);
+    }
+    .hero__section_middletitle{
+    font-size: 18px;
+    width: 95%;
+    }
+    
+}
+
+/* media queries for get the app */
+@media only screen and (max-width:1300px){
+    .container__get_the_app .semi_container .get_the_app_right,
+    .container__get_the_app .semi_container .get_the_app_left{
+        flex: 1;
+    }
+    .container__get_the_app .semi_container{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .container__get_the_app{
+        padding: 2rem 0;
+    }
+    .container__get_the_app .semi_container{
+        width: 95%;
+        flex-direction: column;
+    }
+
+}
+
+
+/* media quieres for the footer section  and some to the explore section also and to the collection section also*/
+@media only screen and (max-width: 900px){
+    .footer_navigation{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .explore_options_container{
+        margin-left: auto;
+    }
+    .container_collections_heading{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .footer_navigation{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .explore_options_container{
+        margin-left: auto;
+    }
+    .container_collections_heading{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+    .footer_navigation{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore_options_container{
+        margin-left: auto;
+    }
+    .container_collections_heading{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
